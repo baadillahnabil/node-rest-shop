@@ -23,8 +23,8 @@ router.post('/', (req, res, next) => {
 })
 
 // Get single product
-router.get('/:id', (req, res, next) => {
-  const id = req.params.id
+router.get('/:idProduct', (req, res, next) => {
+  const id = req.params.idProduct
 
   let message = ''
   if (id === 'special') message = 'You discovered the special ID'
@@ -37,14 +37,14 @@ router.get('/:id', (req, res, next) => {
 })
 
 // Update product
-router.patch('/:id', (req, res, next) => {
+router.patch('/:idProduct', (req, res, next) => {
   res.status(200).json({
     message: 'Updated product!'
   })
 })
 
 // Delete product
-router.delete('/:id', (req, res, next) => {
+router.delete('/:idProduct', (req, res, next) => {
   res.status(200).json({
     message: 'Deleted product!'
   })
