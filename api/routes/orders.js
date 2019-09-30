@@ -18,7 +18,7 @@ router.post('/', (req, res, next) => {
 
   res.status(201).json({
     message: 'Order created',
-    order
+    order: order
   })
 })
 
@@ -27,7 +27,7 @@ router.get('/:id', (req, res, next) => {
   const id = req.params.id
   res.status(200).json({
     message: 'Order details',
-    id
+    id: id
   })
 })
 
@@ -36,7 +36,7 @@ router.delete('/:id', (req, res, next) => {
   const id = req.params.id
   res.status(200).json({
     message: 'Order deleted',
-    id
+    id: id
   })
 })
 
